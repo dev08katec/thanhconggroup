@@ -1,0 +1,15 @@
+@media (min-width: 1400.98px) {
+  .transformation-stories {
+    padding: 0 70px;
+  }
+}
+
+.default-box-title,
+.default-box-title span {
+  font-weight: 600;
+  font-size: 44px;
+  font-family: 'Oswald', sans-serif;
+  color: #00285a;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}

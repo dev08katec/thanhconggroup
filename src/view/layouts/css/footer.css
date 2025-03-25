@@ -1,0 +1,95 @@
+footer {
+  background: linear-gradient(to right, #051f38, #0f2547, #1a2c58);
+  padding: 30px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+footer {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+footer a.logo {
+  margin-bottom: 20px;
+}
+
+footer a.logo img {
+  width: 170px;
+}
+
+footer h3,
+footer p {
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+footer .slogan,
+footer p span {
+  color: #fff;
+}
+
+footer .social-networks img {
+  width: 30px;
+}
+
+footer ul li a {
+  color: #fff;
+}
+
+footer ul li a:hover {
+  color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+}
+
+.copyright {
+  background: gray;
+}
+
+.copyright p {
+  margin: 0;
+}
+
+.btn-gotop {
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+  z-index: 9999;
+  display: block;
+  color: #666;
+  font-size: 32px;
+}
+
+.btn-gotop.show {
+  opacity: 1;
+}
+
+.btn-gotop.hide {
+  opacity: 0;
+}
+
+@media (min-width: 1199.98px) {
+  footer .our-agency {
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  footer .our-agency {
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .our-agency {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .mt-lg-0 {
+    margin-top: 0 !important;
+  }
+}

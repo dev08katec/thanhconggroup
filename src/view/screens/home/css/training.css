@@ -1,0 +1,59 @@
+.lazy-bg.loaded,
+.lazy-img.loaded {
+  opacity: 1;
+}
+.skeleton {
+  background-color: #e0e0e0;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+.lazy-bg {
+  width: 100%;
+  background-color: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.types-of-training {
+  background-size: cover;
+  background-color: unset !important;
+  padding: 20px;
+}
+.types-of-training h2 {
+  font-size: 44px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  color: #00285a;
+  text-align: center;
+  text-transform: uppercase;
+}
+.types-of-training .description {
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin: 20px 0;
+}
+.types-of-training h3,
+.types-of-training h3 a {
+  font-size: 36px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  color: #00285a;
+  margin-bottom: 20px;
+}
+.skeleton {
+  background-color: #e0e0e0;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+.lazy-img.loaded {
+  opacity: 1;
+}
+.types-of-training img {
+  border-radius: 5px;
+}
+.lazy-img {
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}

@@ -1,0 +1,249 @@
+.bm-activities {
+  padding: 40px 0;
+  position: relative;
+}
+
+.bm-activities .item {
+  height: 100%;
+}
+.bm-activities .box-wrap {
+  border-radius: 8px;
+}
+.bg-white {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+}
+.p-3 {
+  padding: 1rem !important;
+}
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.bm-activities .course-banner {
+  transform: translateY(calc(-50%));
+  margin-bottom: calc(-50px);
+  text-align: center;
+}
+
+.bm-activities .box-title p {
+  font-weight: 600;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  color: #00285a;
+}
+
+.bm-activities .box-title h2 {
+  font-weight: 500;
+  font-size: 44px;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  color: #00285a;
+  text-align: center;
+}
+
+.bm-activities .box-wrap {
+  border-radius: 8px;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.bm-activities .box-wrap:hover {
+  transform: translateY(-5px);
+}
+
+.bm-activities .course-banner img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+
+@media only screen and (min-width: 768px) {
+  .bm-activities .info {
+    position: relative;
+  }
+}
+.bm-activities .info {
+  border: 1px solid #00285a;
+  border-radius: 8px;
+  padding: 10px;
+  min-height: 19rem;
+  height: 320px;
+}
+
+.bm-activities .info h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #00285a;
+  text-align: center;
+  margin: 15px 0;
+  border-bottom: 1px solid #00285a;
+  padding-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.bm-activities .info h3:hover {
+  color: var(--bs-link-color);
+}
+
+.bm-activities .info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bm-activities .info ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.bm-activities .info ul li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.bm-activities .info .more {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.bm-activities .info .btn {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid #00285a;
+  border-radius: 8px;
+  padding: 10px 15px;
+  display: inline-block;
+  text-decoration: none;
+  color: #212526;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.bm-activities .info .btn:hover {
+  background: var(--color-primary);
+  color: var(--bs-white);
+}
+
+.bm-activities .info img {
+  height: 1.35rem;
+  width: 1.25rem;
+  display: inline;
+}
+
+.bm-activities .scroll-container:after {
+  content: '.';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.activities-wrapper {
+  display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+  .bm-activities .info .btn {
+    bottom: 10px;
+    left: 0;
+    padding: 5px;
+    width: 100%;
+  }
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding-top: 3rem;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.activity-item {
+  flex: 0 0 calc((100% - 40px) / 3);
+  scroll-snap-align: start;
+  width: 100%;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0);
+  transition: background 0.3s ease;
+}
+
+.nav-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+}
+
+.nav-button.left {
+  margin-left: -2rem;
+  top: 57%;
+  transform: rotate(180deg);
+}
+
+.nav-button.right {
+  right: 17rem;
+}
+
+.nav-button img {
+  width: 14px;
+  height: 26px;
+}
+
+@media (max-width: 992px) {
+  .scroll-container {
+    scroll-snap-type: x mandatory;
+  }
+
+  .activity-item {
+    flex: 0 0 50%;
+  }
+
+  .nav-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-button.left {
+    left: 0;
+  }
+
+  .nav-button.right {
+    right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .activity-item {
+    flex: 0 0 100%;
+  }
+}

@@ -1,0 +1,116 @@
+.banner {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.banner-list {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-track {
+  display: flex;
+  transition: transform 2s ease-in-out;
+  white-space: nowrap;
+}
+
+.slide {
+  flex: 0 0 calc(100vw - 10px);
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.banner-container {
+  display: block;
+  width: 100%;
+}
+
+.banner-img {
+  display: block;
+  width: 100vw;
+  height: auto;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.owl-dots {
+  text-align: center;
+}
+
+.owl-dots button {
+  background: 0 0;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+}
+
+.owl-dots span {
+  width: 32px;
+  height: 8px;
+  border-radius: 8px;
+  background: #00285a;
+  margin: 0 2px;
+}
+
+.controls {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.controls button {
+  width: 10px;
+  height: 10px;
+  background: #050505;
+  border: none;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.controls button.active {
+  opacity: 1;
+  background: #000;
+}
+
+.owl-nav {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 10px;
+  top: 50%;
+  z-index: 0;
+}
+
+.owl-nav button.owl-prev,
+.owl-nav button.owl-next,
+button.owl-dot {
+  background: 0 0;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+}
+.owl-dot,
+.owl-nav .owl-next,
+.owl-nav .owl-prev {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.owl-nav .owl-next,
+.owl-nav .owl-prev {
+  opacity: 0.7;
+}
