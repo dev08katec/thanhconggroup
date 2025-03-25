@@ -35,16 +35,24 @@
 }
 .types-of-training h3,
 .types-of-training h3 a {
-  font-size: 36px;
+  font-size: 28px;
   font-family: 'Oswald', sans-serif;
-  font-weight: 400;
-  color: #00285a;
-  margin-bottom: 20px;
+  font-weight: 500;
+  color: #00387b;
+  margin-top: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 3.2em;
+  line-height: 1.6em;
 }
 .skeleton {
   background-color: #e0e0e0;
   animation: pulse 1.5s infinite ease-in-out;
 }
+
 .lazy-img.loaded {
   opacity: 1;
 }
@@ -56,4 +64,39 @@
   height: auto;
   opacity: 0;
   transition: opacity 0.5s ease;
+  background: #fff;
+  margin-top: 20px;
+}
+.types-of-training .detail {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+.bg-white {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+}
+.py-3 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+.opacity-75 {
+  opacity: 0.75 !important;
+}
+.types-of-training .detail .btn {
+  background: linear-gradient(90deg, #00285a 0, #001836 100%);
+}
+.types-of-training .btn {
+  background: linear-gradient(90deg, red 0, #bb0100 100%);
+  border-radius: 8px;
+  color: #fff;
+  display: inline;
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.types-of-training img {
+  border-radius: 5px;
 }

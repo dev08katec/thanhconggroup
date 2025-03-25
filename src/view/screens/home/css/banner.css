@@ -1,7 +1,9 @@
 .banner {
   position: relative;
   width: 100vw;
+  margin-top: 68px;
   overflow: hidden;
+  z-index: 99;
 }
 
 .banner-list {

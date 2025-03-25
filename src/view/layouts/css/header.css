@@ -1,4 +1,6 @@
 .header-transition {
+  position: fixed;
+  z-index: 1000;
   width: 100%;
   background-color: white;
   transition: transform 0.3s ease-in-out, box-shadow 0.5s ease-in-out;
@@ -19,8 +21,9 @@
 }
 
 .navbar-area img.logo_main {
-  width: 8.5rem;
+  width: 6.5rem;
   height: auto;
+  margin-bottom: 5px;
 }
 
 .mobile_menu_open {
@@ -51,7 +54,7 @@
 
 .navbar {
   width: 100%;
-  padding: 8px 0px;
+  padding: 8px 0px 0px;
   height: 100%;
 }
 
@@ -88,34 +91,60 @@ nav {
 .navbar-nav .nav-item span {
   cursor: pointer;
 }
+
 .navbar-nav .nav-item > a,
 .navbar-nav .nav-item > span {
   font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 12px;
+  font-size: 15px;
   color: #001836;
   padding: 5px 9px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
 }
-.d-block {
-  display: block !important;
+@media (min-width: 1023.98px) {
+  .navbar-nav .nav-item {
+    padding: 0 10px;
+  }
+  .navbar-nav .nav-item > span {
+    font-size: 14px;
+  }
 }
 
-.navbar-nav .nav-item .subnav {
-  right: 0;
+@media (min-width: 1279.98px) {
+  .navbar-nav .nav-item {
+    padding: 0 20px;
+  }
 }
 .navbar-nav .nav-item .subnav {
+  right: 0;
   margin-top: 6px;
+  border-radius: 4px;
   background-color: var(--white);
-  box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
+  box-shadow: rgba(50, 50, 93, 0.75) 0 13px 27px -5px,
+    rgba(0, 0, 0, 0.5) 0 8px 16px -8px;
   visibility: hidden;
   opacity: 0;
-  width: 360px;
+  width: 320px;
   z-index: 1000;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   min-width: 200px;
+  max-height: 480px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark-gray) transparent;
+}
+
+.subnav::-webkit-scrollbar {
+  width: 2px;
+}
+
+.subnav::-webkit-scrollbar-thumb {
+  background-color: var(--dark-gray);
+  border-radius: 3px;
+}
+
+.subnav::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .navbar-nav .nav-item:hover .subnav {
@@ -124,21 +153,31 @@ nav {
   display: block;
 }
 
-.navbar-nav .nav-item .subnav li:not(:last-child) {
-  border-bottom: 1px solid var(--dark-gray);
+.navbar-nav .nav-item:hover li span {
+  color: #002f68;
+  font-weight: bolder;
 }
+
 .navbar-nav .nav-item .subnav li {
-  padding: 0 20px;
+  padding: 0;
+  padding-left: 8px;
+  padding-right: 0px;
   color: transparent;
   transition: background-color 0.2s linear;
 }
 
-.navbar-nav .nav-item .subnav li:hover {
-  background: var(--gray);
+.navbar-nav .nav-item .subnav .subnav-list li:not(:last-child) {
+  border-bottom: 1px solid var(--dark-gray);
+}
+.navbar-nav .nav-item .subnav .subnav-list li:last-child {
+  margin-bottom: 5px;
 }
 
-.navbar-nav .nav-item .subnav li:hover a {
+.navbar-nav .nav-item .subnav .subnav-list li:hover a {
   color: var(--black);
+  background: var(--gray);
+  margin-left: -8px;
+  padding-left: 8px;
 }
 
 .navbar-nav .nav-item .subnav a {
@@ -154,10 +193,6 @@ nav {
   line-height: 39px;
   color: #001836;
   padding: 0;
-}
-.navbar-nav .nav-item a,
-.navbar-nav .nav-item span {
-  cursor: pointer;
 }
 
 .navbar-nav .nav-item .subnav::after {
@@ -237,13 +272,12 @@ header nav span.btn {
   text-align: center;
 }
 
-.mobile_menu_nav ul li {
-  cursor: pointer;
-  user-select: none;
-  padding-right: 40px;
-  border-bottom: 1px solid #ccc;
+.subnav ul {
+  margin: 0;
+  padding: 0;
 }
 
+.subnav ul ol,
 .mobile_menu_nav ul li a,
 .mobile_menu_nav ul li span {
   font-weight: 700;
@@ -251,6 +285,13 @@ header nav span.btn {
   font-size: 14px;
   display: block;
   padding: 10px 0;
+}
+
+.subnav span {
+  padding-left: 10px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bolder;
 }
 
 .dropdown-btn {
@@ -293,6 +334,9 @@ header nav span.btn {
   cursor: pointer;
   user-select: none;
   padding-right: 0px;
+}
+
+.mobile_menu_nav ul li:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
@@ -301,6 +345,6 @@ header nav span.btn {
   padding-left: 20px;
 }
 
-.dropdown-container li {
-  padding-left: 20px;
+.mobile_menu_nav .dropdown-container .mobile-subnav {
+  color: #00387b;
 }

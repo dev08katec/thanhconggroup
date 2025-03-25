@@ -20,7 +20,7 @@ const Brochure = () => {
           <div className="wrap">
             <div className="row">
               <div className="brochure-left col-lg-6 col-12">
-                <div className="brochure-video mt-lg-5 lazy-bg skeleton loaded">
+                <div className="brochure-video mt-lg-5 mb-3 lazy-bg skeleton loaded">
                   {!isPlaying ? (
                     <div
                       style={{
@@ -67,7 +67,7 @@ const Brochure = () => {
                     <iframe
                       width="100%"
                       height="450px"
-                      src="https://www.youtube.com/embed/gYzPpD_cgHg?autoplay=1"
+                      src={contact.youtube}
                       title="YouTube Video"
                       frameBorder="0"
                       allow="autoplay; encrypted-media"
@@ -87,22 +87,23 @@ const Brochure = () => {
                 <div className="ps-lg-5 ms-lg-3 right">
                   <h1 className="default-box-title">{contact.name}</h1>
                   <p className="slogan">
-                    <strong>Chuyển hóa Lãnh đạo - Kiến tạo tương lai</strong>
+                    <strong>
+                      Thành Đồng – Chất lượng cao cho mọi công trình
+                    </strong>
                   </p>
                   <div className="larry-page-quote position-relative">
-                    <div className="quote">
-                      “Thành hay bại đều phụ thuộc vào năng lực lãnh đạo. Lãnh
-                      đạo thay đổi thì mọi thứ thay đổi”
-                    </div>
+                    <div className="quote">“Nội dung Quote”</div>
                     <strong className="position-absolute">
-                      Mr. Tony Dzung
+                      Hằng Thành Đồng Group
                     </strong>
                   </div>
                   <div className="mb-3 text">
-                    Với sứ mệnh chuyển hóa những nhà lãnh đạo, Trường doanh nhân
-                    HBR luôn tiên phong cập nhật tinh hoa tri thức quốc tế giúp
-                    chủ doanh nghiệp Việt Nam nâng tầm năng lực quản trị, kiến
-                    tạo tầm nhìn dài hạn 5-10-20 năm cho tổ chức.
+                    Vệ sinh công nghiệp là dịch vụ vệ sinh từ A – Z, đó là sự
+                    kết hợp giữa sức lao động của công nhân vệ sinh và công nghệ
+                    máy móc hiện đại làm sạch triệt để các vết bẩn bám trên bề
+                    mặt sàn, hoặc các vết bẩn cứng như sơn, xi măng, nước sơn
+                    pê… mà những cách làm sạch thông thường không đạt hiệu quả
+                    cao mà lại tốn nhiều thời gian.
                   </div>
                   <div>
                     <a href="/no-data" title="" className="detail me-2">

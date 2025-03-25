@@ -1,9 +1,6 @@
 import React from 'react';
 import '../css/statistics.css';
-
-const statisticData = [
-  { label: 'CHỦ DOANH NGHIỆP', link: './images/number1.webp' },
-];
+import data from '../../../../data/layouts/statistics';
 
 const Statistics = () => {
   return (
@@ -22,66 +19,20 @@ const Statistics = () => {
           NHỮNG CON SỐ ĐÁNG TỰ HÀO
         </div>
         <div className="row">
-          <div className="col-lg-3 col-md-3 col-6">
-            <div className="text-center">
-              <img
-                src="./images/number1.webp"
-                data-aos="zoom-out"
-                className="mw-100 aos-init aos-animate"
-                alt="CHỦ DOANH NGHIỆP"
-                loading="lazy"
-              />
+          {data.map((item, index) => (
+            <div key={index} className="col-lg-3 col-md-3 col-6 mt-md-3">
+              <div className="text-center">
+                <img
+                  src={item.image}
+                  data-aos="zoom-out"
+                  className="mw-100 aos-init aos-animate"
+                  alt={item.label}
+                  loading="lazy"
+                />
+              </div>
+              <p className="description">{item.label}</p>
             </div>
-            <p className="description">CHỦ DOANH NGHIỆP</p>
-          </div>
-          <div className="col-lg-3 col-md-3 col-6">
-            <div className="text-center">
-              <img
-                src="./images/number2.webp"
-                data-aos="zoom-out"
-                className="mw-100 aos-init aos-animate"
-                alt="CHUYÊN GIA TRONG NƯỚC VÀ QUỐC TẾ"
-                loading="lazy"
-              />
-            </div>
-            <p className="description">
-              CHUYÊN GIA TRONG NƯỚC <br />
-              VÀ QUỐC TẾ
-            </p>
-          </div>
-          <div className="col-lg-3 col-md-3 col-6">
-            <div className="text-center">
-              <img
-                src="./images/number4.webp"
-                data-aos="zoom-out"
-                className="mw-100 aos-init aos-animate"
-                alt="THÀNH VIÊN CỘNG ĐỒNG BUSINESS MASTER"
-                loading="lazy"
-              />
-            </div>
-            <p className="description">
-              THÀNH VIÊN CỘNG ĐỒNG <br />
-              BUSINESS MASTER
-            </p>
-          </div>
-          <div className="col-lg-3 col-md-3 col-6">
-            <div className="text-center">
-              <img
-                src="./images/number3.webp"
-                data-aos="zoom-out"
-                className="mw-100 aos-init aos-animate"
-                alt="CHƯƠNG TRÌNH ĐÀO TẠO CHUYÊN SÂU VỀ LÃNH ĐẠO VÀ QUẢN TRỊ"
-                loading="lazy"
-              />
-            </div>
-            <p className="description">
-              CHƯƠNG TRÌNH ĐÀO TẠO
-              <br />
-              CHUYÊN SÂU VỀ
-              <br />
-              LÃNH ĐẠO VÀ QUẢN TRỊ
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </section>

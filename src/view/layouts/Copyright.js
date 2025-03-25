@@ -5,7 +5,7 @@ const Copyright = () => {
   return (
     <div className="copyright">
       <p className="py-3 text-center sub-footer">
-        Hệ thống được phát triển và vận hành bởi{' '}
+        Design by{' '}
         <a
           href="https://langtech.vn"
           title="Langtech.vn"

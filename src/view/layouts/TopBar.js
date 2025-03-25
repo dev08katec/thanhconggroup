@@ -7,7 +7,7 @@ const TopBar = () => {
     <section className="top-bar d-flex">
       <div className="container">
         <div className="row justify-content-between align-items-center h-100 m-0">
-          <div className="d-flex align-items-center col-xl-6 col-md-6 col-12 top-bar-first mb-2 mb-xl-0 p-0">
+          <div className="d-flex align-items-center col-xl-6 col-md-7 col-12 top-bar-first mb-2 mb-xl-0 p-0">
             <span className="me-2">
               <img
                 src="./images/icons/phone.png"
@@ -25,8 +25,22 @@ const TopBar = () => {
                 {contact.phone}
               </a>
             </span>
+
+            <span className="me-2 text-white">
+              <img
+                src="./images/icons/clock.png"
+                alt="icon-phone"
+                className="icon icon-phone"
+                width="24"
+                height="24"
+                loading="lazy"
+              />
+              <a href="/" style={{ textTransform: 'uppercase' }}>
+                Thời gian làm việc: {contact.time}
+              </a>
+            </span>
           </div>
-          <div className="d-flex justify-content-sm-end col-xl-6 col-md-6 col-12 top-bar-second mb-2 mb-xl-0 p-0">
+          <div className="d-flex justify-content-sm-end col-xl-6 col-md-5 col-12 top-bar-second mb-2 mb-xl-0 p-0">
             <div className="d-none d-xl-block search">
               <div className="position-relative d-flex justify-content-end">
                 <form action="/search" method="get" id="search-form">
@@ -53,8 +67,6 @@ const TopBar = () => {
                 <img
                   src="./images/icons/facebook.png"
                   alt="facebook"
-                  width="32"
-                  height="32"
                   loading="lazy"
                 />
               </a>
@@ -67,8 +79,6 @@ const TopBar = () => {
                 <img
                   src="./images/icons/tiktok.png"
                   alt="tiktok"
-                  width="32"
-                  height="32"
                   loading="lazy"
                 />
               </a>
@@ -80,8 +90,6 @@ const TopBar = () => {
                 <img
                   src="./images/icons/youtube.png"
                   alt="youtube"
-                  width="32"
-                  height="32"
                   loading="lazy"
                 />
               </a>

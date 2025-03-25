@@ -27,9 +27,15 @@
   color: #fff;
 }
 .section-statistics p.description {
-  font-size: 16px;
+  font-size: 18px;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   color: #fff;
   text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.section-statistics img {
+  width: 10.5em;
 }

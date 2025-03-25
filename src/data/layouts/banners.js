@@ -2,28 +2,37 @@ const banners = [
   {
     id: 0,
     link: '/',
-    title: 'CHUỖI UNLOCK YOUR CAREER (SLIDE)',
-    mobileSrc: 'https://hbr.edu.vn/storage/images/2025/01/06/k30-mobile.webp',
-    desktopSrc:
-      'https://hbr.edu.vn/storage/images/2025/01/06/k30-banner-web.webp',
+    title: '',
+    mobileSrc: './images/1.SP-CHINH.png',
+    desktopSrc: './images/1.SP-CHINH.png',
   },
   {
     id: 1,
     link: '/',
-    title: 'CHUỖI UNLOCK YOUR CAREER (SLIDE)',
-    mobileSrc:
-      'https://hbr.edu.vn/storage/images/2025/03/11/mobile-1-compressed.webp',
-    desktopSrc:
-      'https://hbr.edu.vn/storage/images/2025/03/11/chuoi-3-chuong-trinh-web-compressed.webp',
+    title: '',
+    mobileSrc: './images/2.ve-sinh-cong-nghiep.png',
+    desktopSrc: './images/2.ve-sinh-cong-nghiep.png',
   },
   {
     id: 2,
     link: '/',
-    title: 'CHUỖI UNLOCK YOUR CAREER (SLIDE)',
-    mobileSrc:
-      'https://hbr.edu.vn/storage/images/2025/03/04/quan-tri-nhan-su-k20-mb-1741058471.webp',
-    desktopSrc:
-      'https://hbr.edu.vn/storage/images/2025/03/04/quan-tri-nhan-su-k20-web-1741058467.webp',
+    title: '',
+    mobileSrc: './images/3.Tong-hop-linh-vuc-cong-ty.png',
+    desktopSrc: './images/3.Tong-hop-linh-vuc-cong-ty.png',
+  },
+  {
+    id: 3,
+    link: '/',
+    title: '',
+    mobileSrc: './images/4.Dich-vu-chong-tham.png',
+    desktopSrc: './images/4.Dich-vu-chong-tham.png',
+  },
+  {
+    id: 4,
+    link: '/',
+    title: '',
+    mobileSrc: './images/5.di-doi-van-chuyen.png',
+    desktopSrc: './images/5.di-doi-van-chuyen.png',
   },
 ];
 

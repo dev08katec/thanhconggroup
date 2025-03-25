@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './css/header.css';
 import menuItems from '../../data/layouts/menuItems';
 import { IoIosArrowDown } from 'react-icons/io';
+import contact from '../../data/layouts/contact';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,10 +40,10 @@ const Navbar = () => {
       >
         <div className="container navbar-area d-flex align-items-center">
           <nav className="navbar navbar-expand-lg">
-            <a href="/" title="TRƯỜNG DOANH NHÂN HBR - HBR BUSINESS SCHOOL">
+            <a href="/" title={contact.name}>
               <img
-                src="./images/logo-da-crop.png"
-                alt="TRƯỜNG DOANH NHÂN HBR - HBR BUSINESS SCHOOL"
+                src={contact.logo}
+                alt={contact.name}
                 className="logo_main"
                 loading="lazy"
               />
@@ -62,21 +63,36 @@ const Navbar = () => {
               }`}
             >
               <ul id="nav" className="navbar-nav ms-auto ps-0">
-                {menuItems.map((item, index) => (
+                {menuItems.map((data, index) => (
                   <li key={index} className="nav-item position-relative">
                     <span className="d-block">
-                      {item.label}
-                      <IoIosArrowDown
-                        className="fas "
-                        style={{ fontSize: '12px' }}
-                      />
+                      {data.label}
+                      {data.items.length > 0 && (
+                        <IoIosArrowDown
+                          className="fas "
+                          style={{ fontSize: '12px' }}
+                        />
+                      )}
                     </span>
                     <ul className="subnav position-absolute ps-0">
-                      {item.subItems.map((subItem, subIndex) => (
-                        <li key={subIndex}>
-                          <a href={subItem.link} title={subItem.label}>
-                            {subItem.label}
-                          </a>
+                      {data.items.map((item, itemIndex) => (
+                        <li key={itemIndex}>
+                          {item.labelItem !== '' && (
+                            <span style={{ fontWeight: 'bold' }}>
+                              {item.labelItem}
+                            </span>
+                          )}
+                          {item.subItems.length > 0 && (
+                            <ul className="subnav-list ">
+                              {item.subItems.map((subItem, subIndex) => (
+                                <li key={subIndex}>
+                                  <a href={subItem.link} title={subItem.label}>
+                                    {subItem.label}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -101,10 +117,10 @@ const Navbar = () => {
       >
         <div className="d-flex justify-content-between align-items-center pe-2">
           <img
-            src="./images/logo-da-crop.png"
+            src={contact.logo}
+            alt={contact.name}
             width="222"
             height="138"
-            alt="TRƯỜNG DOANH NHÂN HBR - HBR BUSINESS SCHOOL"
             className="logo-side-bar"
           />
           <span className="icon-close" onClick={toggleMenu}>
@@ -113,7 +129,7 @@ const Navbar = () => {
         </div>
         <nav className="mobile_menu_nav mobile-menu">
           <ul>
-            {menuItems.map((item, index) => (
+            {menuItems.map((data, index) => (
               <>
                 <li key={index} className="position-relative">
                   <div
@@ -122,21 +138,40 @@ const Navbar = () => {
                     }`}
                     onClick={() => toggleSubMenu(index)}
                   >
-                    <span>{item.label}</span>
-                    <i
-                      className={`icon-angle-down ${
-                        isSubMenu === index ? 'rotate-up' : ''
-                      }`}
-                    ></i>
+                    <span>{data.label}</span>
+                    {data.items.length > 0 && (
+                      <i
+                        className={`icon-angle-down ${
+                          isSubMenu === index ? 'rotate-up' : ''
+                        }`}
+                      ></i>
+                    )}
                   </div>
                 </li>
                 {isSubMenu === index && (
                   <ul className="dropdown-container">
-                    {item.subItems.map((subItem, subIndex) => (
-                      <li key={subIndex}>
-                        <a href={subItem.link} title={subItem.label}>
-                          {subItem.label}
-                        </a>
+                    {data.items.map((item, itemIndex) => (
+                      <li key={itemIndex}>
+                        {item.labelItem !== '' && (
+                          <span className="mobile-subnav">
+                            {item.labelItem}
+                          </span>
+                        )}
+                        {item.subItems.length > 0 && (
+                          <ul>
+                            {item.subItems.map((subItem, subIndex) => (
+                              <li key={subIndex}>
+                                <a
+                                  style={{ color: '#003c86' }}
+                                  href={subItem.link}
+                                  title={subItem.label}
+                                >
+                                  {subItem.label}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </li>
                     ))}
                   </ul>
